@@ -22,9 +22,9 @@ You need to login to Azure using:
 az login
 ```
 This will send you to your browser where you'll login. And boom, logged, then:
-- You need a token generated using this command:
+- You need a token (SAS) generated using this command:
 ```
-az storage container generate-sas --name stage --expiry $(date -u -d '60 minutes' +%Y-%m-%dT%H:%MZ) --permissions lrw --output tsv --account-name  [STORAGE_ACCOUNT] --https-only
+SAS=$(az storage container generate-sas --name stage --expiry $(date -u -d '60 minutes' +%Y-%m-%dT%H:%MZ) --permissions lrw --output tsv --account-name  [STORAGE_ACCOUNT] --https-only)
 ```
 - Batch tsv with all the files to upload.
 
