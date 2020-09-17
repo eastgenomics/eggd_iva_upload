@@ -10,9 +10,9 @@ This app may be executed as a standalone app.
 ## What data are required for this app to run?
 Install azure-cli:
 ```
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+curl -sL https://azurecliprod.blob.core.windows.net/$root/deb_install.sh | sudo bash
 ```
-Install azcopy https://aka.ms/downloadazcopy-v10-linux (to check if the upload went through afterwards):
+Install azcopy https://azcopyvnext.azureedge.net/release20200818/azcopy_linux_amd64_10.6.0.tar.gz (to check if the upload went through afterwards):
 ```
 tar xvzf azcopy_linux_amd64_${version}.tar.gz
 ```
