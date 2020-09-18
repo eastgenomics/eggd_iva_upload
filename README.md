@@ -24,7 +24,7 @@ az login
 This will send you to your browser where you'll login. And boom, logged, then:
 - You need a token (SAS) generated using this command:
 ```
-SAS=$(az storage container generate-sas --name stage --expiry $(date -u -d '60 minutes' +%Y-%m-%dT%H:%MZ) --permissions lrw --output tsv --account-name  [STORAGE_ACCOUNT] --https-only)
+SAS=$(az storage container generate-sas --name stage --expiry $(date -u -d '60 minutes' +%Y-%m-%dT%H:%MZ) --permissions lrw --output tsv --account-name opencgaeglhstage --https-only)
 ```
 - Batch tsv with all the files to upload.
 
